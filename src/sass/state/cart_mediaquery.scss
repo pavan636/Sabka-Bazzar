@@ -1,0 +1,67 @@
+// @import "../base/base";
+@media screen and (min-width: 1024px) {
+  .minicart-modal {
+    width: 35vw;
+    height: 80vh;
+    max-width: 40rem;
+    font-size: $text-font-size;
+    background-color: $secondary-color;
+    display: flex;
+    flex-direction: column;
+    position: fixed; 
+    bottom: 0;
+    right: 2%;
+    z-index: 999;
+  }
+  .minicart-modal-header {
+    display: flex;
+    background-color: $text-color;
+    justify-content: space-between;
+
+    .minicart-modal-header-heading {
+      background-color: $text-color;
+      margin: 0;
+      color: $primary-cart-color;
+      
+    }
+
+    .minicart-modal-header-btn {
+      display: block;
+      background-color: $text-color;
+      color: $secondary-color;
+      margin-right: 1rem;
+      border-width: 0;
+      font-size: $text-font-size;
+      width: 20px;
+      cursor: pointer;
+    }
+  }
+
+  .minicart-modal-footer {
+    display: flex;
+    flex-direction: column;
+    background-color: $primary-cart-color;
+    align-items: center;
+    padding-top: 0.5rem;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+
+    .minicart-modal-footer-text {
+      font-size: $small-font-size;
+      padding: 0.5rem 0rem;
+      color: $text-color;
+    }
+
+    .minicart-modal-footer-btn {
+      font-size: $text-font-size;
+      width: 95%;
+      padding: 0.7rem 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      background-color: $button-color;
+      color: $primary-cart-color;
+      border: $primary-cart-color;
+    }
+  }
+}

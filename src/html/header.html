@@ -1,0 +1,32 @@
+<header class="sb-header">
+  <img
+    class="sb-header__companylogo"
+    src="../../static/images/logo_2x.png"
+    alt="company logo"
+  />
+  <nav class="sb-header sb-header-primary--link">
+    <a href="/" id="home" class="sb-header__link sb-header__link--margin"
+      >Home</a
+    >
+    <a tabindex="0" id="product" class="sb-header__link">Products</a>
+  </nav>
+    <div class="sb-header sb-header--utility">
+        <nav class="sb-header-secondary--link">
+            <a tabindex="0" id="signin" class="sb-header__secondary-link">SignIn</a>
+            <a tabindex="0" id="register" class="sb-header__secondary-link">Register</a>
+        </nav>
+        <button class="sb-header sb-header--cart" id="cartBtn" aria-label="cart">
+            <img class="sb-header__cartlogo" src="../../static/images/cart.svg" alt="cart logo">
+            <span class="sb-header__cartitems" aria-live="assertive" aria-label="item count"><span id="cartCount2">0</span> items</span>
+        </button>
+    </div>
+</header>
+<section class="sb-dropdown">
+    <img class="sb-dropdown__dropbtn" src="../../static/images/caret-down-solid.svg" id="DropdownBtn">
+    <ul id="Dropdown" class="sb-dropdown__dropdown-content">
+      <li><a href="/">Home</a></li>
+      <li><a href="#about">Products</a></li>
+      <li> <a href="#contact">Signin</a></li>
+      <li> <a href="#contact">Register</a></li>
+     </ul>
+</section>

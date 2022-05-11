@@ -1,0 +1,89 @@
+.sb-header{
+    position: sticky;
+    display: flex;
+    top:0;
+    width: 100%;
+    height: 80px;
+    box-shadow: 0px 10px 10px -10px rgba(201, 200, 200, 0.886);
+    &.sb-header-primary--link{
+        margin-left: 5rem;
+        padding-top: 3rem;
+    .sb-header__link{
+        font-size: 1rem;
+        color: rgb(122, 122, 122);
+        font-weight: 700;
+        line-height: 1rem;
+        cursor: pointer;
+        &.sb-header__link--margin{
+            margin-right: 1rem;
+            }
+        }
+    }
+    .sb-header.sb-header--utility{
+        width: 20%;
+        display:flex ;
+        flex-direction: column;
+        justify-content: space-between;
+        .sb-header__secondary-link{
+            margin-left: 0.5rem;
+            font-size: 0.8rem;
+            color: #000;
+            cursor: pointer;
+        }
+    }
+
+    .sb-header.sb-header--cart{
+        background-color: rgb(228, 221, 221);
+        height: 40px;
+        width: 100px;
+        border: none;
+        cursor: pointer;
+        padding-top: 0.3rem;
+        padding-left: 1rem;
+        .sb-header__cartitems{
+            font-size: 0.8rem;
+            align-self: center;
+        }
+    }
+    
+    .sb-header__companylogo{
+        margin-left: 12rem;
+        width: 130px;
+        height: 60px;
+        align-self: center;
+    }
+    .sb-header__cartlogo{
+        width: 30px;
+        height: 30px;
+        filter: invert(28%) sepia(31%) saturate(4302%) hue-rotate(317deg) brightness(83%) contrast(95%);
+    }
+    a{
+        text-decoration: none;
+        &:hover{
+            color: rgb(228, 221, 221);
+            text-decoration: underline;
+        }
+    }
+}
+
+.sb-dropdown__dropdown-content{
+    display: none;
+    text-align: center;
+}
+.sb-dropdown{
+width: 100%;
+display: none;
+background-color: white;
+.sb-dropdown__dropbtn{
+    height: 30px;
+    margin-left: 94%;
+    display: inline-block;
+}
+
+ul li a{
+    text-decoration: none;
+}
+}
+.show{
+    display: block;
+}

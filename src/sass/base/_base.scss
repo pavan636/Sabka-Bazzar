@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap");
+
+$primary-cart-color: #fff;
+$secondary-color: #ddd;
+$button-color: #c02958;
+$text-color: #212121;
+$button-text-color: #fff;
+$nav-text-color: #4d4d4d;
+$text-font-size: 0.9rem;
+$small-font-size: 0.8rem;
+$primary-color: #c02958;
+$text-color: #000000;
+$layout-bg-color: #eee;
+$font-stack: "Dosis", sans-serif;
+$error-color: #ff0000;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: $font-stack;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-weight: bolder;
+}
+
+//mixin
+@mixin form-error {
+  color: $error-color;
+  margin-top: -25px;
+  margin-bottom: 1rem;
+}
+
+@mixin button {
+  display: block;
+  border-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  border: 1px solid #eee;
+  background-color: $primary-color;
+  color: $layout-bg-color;
+  cursor: pointer;
+  position: relative;
+  &:active {
+    top: 0.6px;
+    left: 0.6px;
+  }
+  &:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+  }
+}
+
+//floating input mixin
+
+@mixin floating-input {
+  border-width: 0;
+  color: rgba(27, 27, 27, 0.8);
+  border-bottom: 3px solid rgba(44, 62, 80, 0.2);
+  background-color: transparent;
+  position: relative;
+  width: 60%;
+  &::placeholder {
+    color: transparent;
+  }
+  + {
+    .floating-label {
+      position: relative;
+      top: 0;
+      left: 0;
+      user-select: none;
+      line-height: 1;
+      height: 2rem;
+      transition: transform 0.25s, opacity 0.25s ease-in-out;
+      transform: translateY(-70%) scale(1);
+      transform-origin: 0;
+      opacity: 0.7;
+    }
+  }
+  &:focus {
+    outline: 0;
+    box-shadow: none;
+    border-color: #22bbd6;
+    + {
+      .floating-label {
+        transform: translateY(-130%) scale(0.8);
+        opacity: 1;
+        color: #00a2be;
+      }
+    }
+    &:valid {
+      border-color: rgba(0, 162, 190, 0.8);
+    }
+    &:invalid {
+      border-color: rgba(255, 71, 87, 0.8);
+    }
+  }
+  &:not(:placeholder-shown) {
+    outline: 0;
+    box-shadow: none;
+    border-color: #22bbd6;
+    + {
+      .floating-label {
+        transform: translateY(-130%) scale(0.8);
+        opacity: 1;
+        color: #00a2be;
+      }
+    }
+    &:valid {
+      border-color: rgba(0, 162, 190, 0.8);
+    }
+    &:invalid {
+      border-color: rgba(255, 71, 87, 0.8);
+    }
+  }
+}

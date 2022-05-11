@@ -1,0 +1,93 @@
+// @import "../base/base";
+// @import "footer";
+.btn-wrapper {
+  @include button;
+}
+.register-container {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.register-container-article {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+
+.register-container-form {
+  flex: 5;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 0 1rem;
+}
+.form-login-button {
+  width: 60%;
+}
+.section-text {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+.floating-input {
+  @include floating-input;
+}
+.form_error {
+  @include form-error;
+}
+.footer {
+  min-height: 5vh;
+  background-color: $layout-bg-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-text {
+  color: $text-color;
+  font-size: 0.9rem;
+}
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .register-container-form {
+    align-items: left;
+    width: 100%;
+  }
+
+  .btn-wrapper {
+    font-size: 0.8rem;
+    padding: 0.4rem;
+  }
+  .register-container {
+    flex-direction: column;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+  }
+  .register-container-article {
+    padding-bottom: 3rem;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .register-container-article {
+    margin-left: 7rem;
+  }
+  .form-login-button {
+    width: 80%;
+  }
+  .floating-input {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .register-container-article {
+    margin-left: 7rem;
+  }
+  .footer-text {
+    font-size: 0.7rem;
+  }
+}

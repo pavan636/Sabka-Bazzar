@@ -1,0 +1,91 @@
+// @import "../base/base";
+
+.btn-wrapper {
+  @include button;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 0 1rem;
+}
+.form-login-button {
+  width: 60%;
+  width: 60%;
+}
+.login-container {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.login-container-article {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+.login-container-form {
+  flex: 5;
+}
+.floating-input {
+  @include floating-input;
+}
+.form_error {
+  @include form-error;
+}
+.section-text {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .login-container-form {
+    align-items: left;
+    width: 100%;
+  }
+  .btn-wrapper {
+    font-size: 0.8rem;
+    padding: 0.4rem;
+  }
+
+  .login-container {
+    flex-direction: column;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+  }
+  .login-container-article {
+    padding-bottom: 3rem;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .login-container-article {
+    margin-left: 7rem;
+  }
+  .form-login-button {
+    width: 80%;
+    width: 80%;
+  }
+  .floating-input {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .login-container-article {
+    margin-left: 7rem;
+  }
+  .form-login-button {
+    width: 80%;
+    width: 80%;
+  }
+  .floating-input {
+    width: 80%;
+  }
+}

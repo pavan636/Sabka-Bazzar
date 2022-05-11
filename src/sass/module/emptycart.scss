@@ -1,0 +1,32 @@
+// @import "../base/base";
+// @import "../layout/flex";
+
+.empty-cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 73vh;
+    background-color: #fff;
+    flex: 1;
+}
+@media screen and (min-width: 1024px) {
+    
+.minicart-modal-section {
+    font-size: $text-font-size;
+    background-color: $secondary-color;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    .empty-cart-header {
+      font-size: $text-font-size;
+      text-align: center;
+    }
+    .empty-cart-text {
+      font-size: $small-font-size;
+      padding: 1rem 0rem;
+      text-align: center;
+    }
+  }
+}

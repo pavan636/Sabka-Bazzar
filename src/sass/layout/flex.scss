@@ -1,0 +1,73 @@
+@mixin setflexdisplay($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: space-evenly;
+}
+
+//hide cart 
+.cart-hide{
+    display:none;
+}
+//cart btn
+.cart-open{
+    display:contents;
+}
+// @import "../base/base";
+.minicart {
+    font-size: $text-font-size;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: $secondary-color;
+}
+.minicart-modal-header-heading {
+    padding: 1rem 1rem;
+    font-size: $text-font-size;
+    background-color: $primary-cart-color;
+     margin: 2rem 0;
+     
+}
+
+
+.minicart-modal-header-btn {
+    display: none;
+}
+
+.minicart-modal-section {
+    font-size: $text-font-size;
+    background-color: $secondary-color;
+    display: flex;
+    flex-direction: column;
+}
+.minicart-modal-footer {
+    display: flex;
+    flex-direction: column;
+    background-color: $primary-cart-color;
+    align-items: center;
+    padding-top: 0.5rem;
+
+    .minicart-modal-footer-text {
+        font-size: .8rem;
+        padding: 0.5rem 0rem;
+    }
+
+    .minicart-modal-footer-btn {
+        font-size: $text-font-size;
+        width: 95%;
+        padding: 0.7rem 0.5rem;
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        text-decoration: none;
+        font-size: $text-font-size;
+        padding: 0.5rem;
+        border: 1px solid #eee;
+        background-color: $button-color;
+        color: $primary-cart-color;       
+        position: relative;
+
+    }
+}
+
+ 
+
